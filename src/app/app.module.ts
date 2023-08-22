@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { PostsComponent } from './components/posts/posts.component';
     MatToolbarModule,
     MatButtonModule,
     MatListModule,
+    MatPaginatorModule,
     HttpClientModule
   ],
   providers: [],
