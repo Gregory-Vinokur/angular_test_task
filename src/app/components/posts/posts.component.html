@@ -1,3 +1,9 @@
 <div class="posts">
   <h1>Посты</h1>
+  <mat-list class="post-list">
+    <mat-list-item *ngFor="let post of posts" lines="3">
+      <span matListItemTitle>{{ post.title }}</span>
+      <span>{{ post.body }}</span>
+    </mat-list-item>
+  </mat-list>
 </div>
