@@ -2,13 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    AppComponent,
+    HeaderComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +21,6 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule
   ],
   providers: [],
-  bootstrap: [HeaderComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

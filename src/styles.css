@@ -14,3 +14,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
