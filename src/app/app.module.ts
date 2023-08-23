@@ -9,13 +9,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule } from '@angular/material/card';
 import { PostsComponent } from './components/posts/posts.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PostsComponent
+    PostsComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { PostsComponent } from './components/posts/posts.component';
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
+    MatCardModule,
     HttpClientModule
   ],
   providers: [],
