@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PostsComponent } from './components/posts/posts.component';
 
@@ -22,7 +22,7 @@ import { PostsComponent } from './components/posts/posts.component';
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
-    MatListModule,
+    MatTableModule,
     MatPaginatorModule,
     HttpClientModule
   ],
