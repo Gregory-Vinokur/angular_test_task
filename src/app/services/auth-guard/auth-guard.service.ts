@@ -8,7 +8,7 @@ export class AuthGuardService {
   constructor(private router: Router) { }
 
   canActivate(): boolean | UrlTree {
-    const isAuthenticated = Boolean(localStorage.getItem('email_GV'));
+    const isAuthenticated = Boolean(localStorage.getItem('isLoggedIn_GV'));
 
     if (isAuthenticated) {
       return true;
