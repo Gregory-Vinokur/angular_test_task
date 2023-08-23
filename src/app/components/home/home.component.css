@@ -1,0 +1,12 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.home-text,
+button {
+  font-size: 1.5rem;
+}

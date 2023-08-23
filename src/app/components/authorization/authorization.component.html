@@ -1,0 +1,41 @@
+<div class="auth-form">
+  <h1 class="page-title">Авторизация</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="form-group">
+      <mat-label>Электронная почта</mat-label>
+      <input
+        type="text"
+        id="username"
+        formControlName="username"
+        matInput
+        required
+      />
+      <mat-error *ngIf="loginForm.controls['username'].hasError('required')"
+        >Электронная почта обязательна</mat-error
+      >
+      <mat-error *ngIf="loginForm.controls['username'].hasError('email')"
+        >Неверный формат электронной почты</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <mat-label>Пароль</mat-label>
+      <input
+        [type]="hide ? 'password' : 'text'"
+        id="password"
+        formControlName="password"
+        matInput
+        required
+      />
+      <button mat-icon-button matSuffix type="button" (click)="hide = !hide">
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error *ngIf="loginForm.controls['password'].hasError('required')"
+        >Пароль обязателен</mat-error
+      >
+      <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')"
+        >Пароль должен быть не менее 6 символов</mat-error
+      >
+    </mat-form-field>
+    <button type="submit" mat-stroked-button color="primary">Войти</button>
+  </form>
+</div>

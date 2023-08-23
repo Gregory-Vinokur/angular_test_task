@@ -1,4 +1,18 @@
 <mat-toolbar class="header" color="primary">
-  <button mat-raised-button color="accent">Войти</button>
-  <button mat-raised-button color="warn">Выйти</button>
+  <button
+    mat-raised-button
+    color="accent"
+    *ngIf="!isUserAuthenticated()"
+    routerLink="/auth"
+  >
+    Войти
+  </button>
+  <button
+    mat-raised-button
+    color="warn"
+    *ngIf="isUserAuthenticated()"
+    (click)="logout()"
+  >
+    Выйти
+  </button>
 </mat-toolbar>
