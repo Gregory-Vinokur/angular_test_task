@@ -15,7 +15,7 @@ export class AuthorizationComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      username: [localStorage.getItem('email_GV') || '', [Validators.required, Validators.email]],
+      username: [localStorage.getItem('email_GV') || '', [Validators.required, Validators.email, Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/)]],
       password: [localStorage.getItem('password_GV') || '', [Validators.required, Validators.minLength(6)]]
     });
   }
